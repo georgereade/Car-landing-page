@@ -15,7 +15,7 @@ function fadeIn() {
     duration: 3000,
     easing: "easeInOutExpo",
     opacity: 1,
-    delay: 500,
+    delay: 1000,
   });
 }
 
