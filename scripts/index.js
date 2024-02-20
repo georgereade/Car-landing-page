@@ -1,3 +1,4 @@
+// function to
 function slideUp() {
   anime({
     targets: "#main-car",
@@ -8,31 +9,39 @@ function slideUp() {
   });
 }
 
+slideUp();
+
 function fadeIn() {
   anime({
-    targets: "#signup-container",
-    translateY: -50,
+    targets: ["#signup-container", "#top-header"],
+    translateY: -30,
     duration: 1000,
     easing: "easeInOutExpo",
     opacity: 1,
   });
 }
 
-window.onscroll = function () {
-  scrollFunction();
-};
+function showFeatures() {
+  anime({
+    targets: "#features",
+    opacity: 1,
+    translateY: -25,
+    duration: 1000,
+    easing: "easeInOutSine",
+  });
+}
 
-slideUp();
+// add an event listener to fade in on scrolling
+window.addEventListener("scroll", scrollFunction);
 
 function scrollFunction() {
-  if (window.scrollY > 5 || window.pageYOffset > 5) {
-    // slideUp();
+  if (window.scrollY > 5 || document.body.scrollTop > 5) {
     fadeIn();
   }
 }
 
-// slideUp();
-// fadeIn();
+// start fade in animation on touch for mobile
+$(document).bind("touchstart", fadeIn);
 
 function slideDown() {
   anime({
@@ -44,7 +53,7 @@ function slideDown() {
   });
 }
 
-function hide() {
+function hideRegister() {
   anime({
     targets: "#notify-button",
     duration: 400,
@@ -54,7 +63,7 @@ function hide() {
   });
 }
 
-function remove() {
+function removeRegister() {
   anime({
     targets: "#notify-button",
     duration: 500,
@@ -67,20 +76,35 @@ function remove() {
 $(document).ready(function () {
   $("#notify-button").click(function () {
     slideDown();
-    hide();
-    remove();
+    hideRegister();
+    removeRegister();
   });
 });
 
-// const scrollPercent = () => {
-//   const bodyST = document.body.scrollTop;
-//   const docST = document.documentElement.scrollTop;
-//   const docSH = document.documentElement.scrollHeight;
-//   const docCH = document.documentElement.clientHeight;
+function hideDiscover() {
+  anime({
+    targets: "#discover-button",
+    duration: 400,
+    delay: 100,
+    opacity: 0,
+    easing: "easeInOutExpo",
+  });
+}
 
-//   return ((docST + bodyST) / (docSH - docCH)) * 100;
-// };
+function removeDiscover() {
+  anime({
+    targets: "#discover-button",
+    duration: 500,
+    delay: 400,
+    translateY: -9999,
+    easing: "easeInOutExpo",
+  });
+}
 
-// window.onscroll = () => {
-//   fadeIn.seek((scrollPercent() / 100) * fadeIn.duration);
-// };
+$(document).ready(function () {
+  $("#discover-button").click(function () {
+    showFeatures();
+    hideDiscover();
+    removeDiscover();
+  });
+});

@@ -35,10 +35,19 @@ small {
   position: relative;
   right: 0%;
   top: 0px;
-  /* align-self: flex-end; */
-  /* justify-self: flex-end; */
   opacity: 0;
 }
+
+.feature-image {
+  height: 300px;
+  width: 25vw;
+  border-radius: 30%;
+}
+
+/* #top-header,
+#features {
+  opacity: 0;
+} */
 
 @media screen and (max-width: 640px) {
   #main-car {
@@ -47,6 +56,10 @@ small {
   html,
   body {
     overflow-x: hidden;
+  }
+  .feature-image {
+    height: 200px;
+    width: 80vw;
   }
 }
 
@@ -58,6 +71,10 @@ small {
   body {
     overflow-x: hidden;
   }
+  .feature-image {
+    height: 200px;
+    width: 80vw;
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1240px) {
@@ -68,9 +85,15 @@ small {
   body {
     overflow-x: hidden;
   }
+  .feature-image {
+    height: 200px;
+    width: 80vw;
+  }
 }
 
-.navbar {
+.navbar,
+#features,
+#signup-container {
   padding: 1rem 2rem;
   border-bottom: #10268c;
   border-width: 5px;
