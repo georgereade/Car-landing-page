@@ -22,7 +22,6 @@
   <body>
     <div class="wrapper">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Home</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -75,7 +74,9 @@
           </form>
         </div>
       </nav>
-      <img id="nav-logo" src="./images/vw-logo2.png" alt="Volkswagen logo" />
+      <a class="navbar-brand" href="/"
+        ><img id="nav-logo" src="./images/vw-logo2.png" alt="Volkswagen logo"
+      /></a>
     </div>
 
     <div class="container col-12 px-4 py-3">
@@ -87,8 +88,8 @@
         />
       </div>
 
-      <div id="signup-container" class="row align-items-center g-lg-5 py-5">
-        <div class="col-lg-7 text-center text-lg-start">
+      <div id="signup-container" class="col align-items-center g-lg-5 py-5">
+        <div class="col-lg-12 text-center text-lg-start">
           <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">
             The new Volkswagen e-Golf
           </h1>
@@ -99,7 +100,7 @@
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
           <form
-            class="p-4 p-md-5 border rounded-3 bg-body-tertiary"
+            class="p-4 p-md-5 rounded-3 bg-body-tertiary"
             onsubmit="return false"
           >
             <button
@@ -108,9 +109,9 @@
               fdprocessedid="b6p0wt"
               id="notify-button"
             >
-              Notify me
+              Register
             </button>
-            <div class="form-floating mb-3 hidden" id="email-form">
+            <div class="form-floating mb-1 hidden" id="email-form">
               <input
                 type="email"
                 class="form-control"
@@ -120,6 +121,14 @@
               />
               <label for="floatingInput">Email address</label>
             </div>
+            <button
+              class="w-100 btn btn-lg btn-primary hidden"
+              type="submit"
+              fdprocessedid="b6p0wt"
+              id="confirm-button"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </div>

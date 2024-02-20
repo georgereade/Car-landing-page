@@ -12,26 +12,63 @@ function fadeIn() {
   anime({
     targets: "#signup-container",
     translateY: -50,
-    duration: 3000,
-    easing: "easeInOutExpo",
-    opacity: 1,
-    delay: 1000,
-  });
-}
-
-function slideDown() {
-  anime({
-    targets: "#email-form",
-    translateY: 30,
     duration: 1000,
     easing: "easeInOutExpo",
     opacity: 1,
   });
 }
 
+window.onscroll = function () {
+  scrollFunction();
+};
+
+slideUp();
+
+function scrollFunction() {
+  if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+    // slideUp();
+    fadeIn();
+  }
+}
+
+// slideUp();
+// fadeIn();
+
+function slideDown() {
+  anime({
+    targets: ["#email-form", "#confirm-button"],
+    translateY: -40,
+    duration: 1000,
+    easing: "easeInOutQuad",
+    opacity: 1,
+  });
+}
+
+function hide() {
+  anime({
+    targets: "#notify-button",
+    duration: 400,
+    delay: 100,
+    opacity: 0,
+    easing: "easeInOutExpo",
+  });
+}
+
+function remove() {
+  anime({
+    targets: "#notify-button",
+    duration: 500,
+    delay: 400,
+    translateY: -9999,
+    easing: "easeInOutExpo",
+  });
+}
+
 $(document).ready(function () {
   $("#notify-button").click(function () {
     slideDown();
+    hide();
+    remove();
   });
 });
 
@@ -47,6 +84,3 @@ $(document).ready(function () {
 // window.onscroll = () => {
 //   fadeIn.seek((scrollPercent() / 100) * fadeIn.duration);
 // };
-
-slideUp();
-fadeIn();
