@@ -25,7 +25,7 @@ window.onscroll = function () {
 slideUp();
 
 function scrollFunction() {
-  if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+  if (window.scrollY > 5 || window.pageYOffset > 5) {
     // slideUp();
     fadeIn();
   }
