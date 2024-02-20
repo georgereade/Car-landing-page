@@ -106,5 +106,6 @@ $(document).ready(function () {
     showFeatures();
     hideDiscover();
     removeDiscover();
+    document.getElementById("features").style.height = "100%";
   });
 });
