@@ -1,4 +1,4 @@
-function slideIn() {
+function slideUp() {
   anime({
     targets: "#main-car",
     translateX: -300,
@@ -19,6 +19,22 @@ function fadeIn() {
   });
 }
 
+function slideDown() {
+  anime({
+    targets: "#email-form",
+    translateY: 30,
+    duration: 1000,
+    easing: "easeInOutExpo",
+    opacity: 1,
+  });
+}
+
+$(document).ready(function () {
+  $("#notify-button").click(function () {
+    slideDown();
+  });
+});
+
 // const scrollPercent = () => {
 //   const bodyST = document.body.scrollTop;
 //   const docST = document.documentElement.scrollTop;
@@ -32,5 +48,5 @@ function fadeIn() {
 //   fadeIn.seek((scrollPercent() / 100) * fadeIn.duration);
 // };
 
-slideIn();
+slideUp();
 fadeIn();
