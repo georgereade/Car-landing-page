@@ -43,10 +43,10 @@ small {
   width: 25vw;
   border-radius: 15%;
 }
-
+/* 
 #features {
   height: 0px;
-}
+} */
 
 @media screen and (max-width: 640px) {
   #main-car {

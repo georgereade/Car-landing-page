@@ -13,7 +13,7 @@ slideUp();
 
 function fadeIn() {
   anime({
-    targets: ["#signup-container", "#top-header"],
+    targets: ["#signup-container", "#top-header", "#features"],
     translateY: -30,
     duration: 1000,
     easing: "easeInOutExpo",
@@ -31,12 +31,24 @@ function showFeatures() {
   });
 }
 
+function featuresPulse() {
+  anime({
+    targets: ".feature-header",
+    duration: 1000,
+    easing: "easeInOutSine",
+    scale: 1.05,
+    loop: 10,
+    direction: "alternate",
+  });
+}
+
 // add an event listener to fade in on scrolling
 window.addEventListener("scroll", scrollFunction);
 
 function scrollFunction() {
   if (window.scrollY > 5 || document.body.scrollTop > 5) {
     fadeIn();
+    featuresPulse();
   }
 }
 
@@ -103,9 +115,9 @@ function removeDiscover() {
 
 $(document).ready(function () {
   $("#discover-button").click(function () {
-    showFeatures();
+    // showFeatures();
     hideDiscover();
     removeDiscover();
-    document.getElementById("features").style.height = "100%";
+    // document.getElementById("features").style.height = "100%";
   });
 });
