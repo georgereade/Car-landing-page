@@ -23,11 +23,13 @@ body {
 h1,
 h2,
 h3,
+h5,
 p,
 a,
 label,
 small {
   color: #000000;
+  user-select: none;
 }
 
 #main-car {
@@ -38,15 +40,45 @@ small {
   opacity: 0;
 }
 
+/* specific sizing for the Galaxy Fold or similar */
+@media screen and (height: 653px) and (width: 280px) {
+  #main-car {
+    right: -110%;
+  }
+  .text-on-image {
+    margin-bottom: 100px;
+  }
+}
+
+/* specific sizing for Surface Duo or similar */
+@media screen and (height: 720px) and (width: 540px) {
+  #main-car {
+    right: 70%;
+  }
+}
+
 .feature-image {
   height: 300px;
   width: 25vw;
   border-radius: 15%;
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
 }
-/* 
-#features {
-  height: 0px;
-} */
+
+.text-on-image {
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  user-select: none;
+  z-index: 0;
+  max-width: 80%;
+}
+
+.down-arrow {
+  opacity: 0;
+}
 
 @media screen and (max-width: 640px) {
   #main-car {
@@ -58,11 +90,20 @@ small {
   }
   .feature-image {
     height: 200px;
-    width: 80vw;
+    width: 90vw;
+    cursor: pointer;
+  }
+  .text-on-image {
+    min-width: 90vw;
+    height: 0px;
+    opacity: 0;
+  }
+  .down-arrow {
+    opacity: 1;
   }
 }
 
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+@media screen and (min-width: 641px) and (max-width: 1023px) {
   #main-car {
     margin-right: -70%;
   }
@@ -72,11 +113,20 @@ small {
   }
   .feature-image {
     height: 200px;
-    width: 80vw;
+    width: 90vw;
+    cursor: pointer;
+  }
+  .text-on-image {
+    min-width: 90vw;
+    height: 0px;
+    opacity: 0;
+  }
+  .down-arrow {
+    opacity: 1;
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1240px) {
+@media screen and (min-width: 1023px) and (max-width: 1240px) {
   #main-car {
     margin-right: -50%;
   }
@@ -93,7 +143,7 @@ small {
 .navbar,
 #features,
 #signup-container {
-  padding: 1rem 2rem;
+  padding: 1rem;
   border-bottom: #10268c;
   border-width: 5px;
   border-style: none none solid none;
@@ -112,6 +162,11 @@ small {
   margin-left: -50px;
   border-radius: 100%;
   transform: translateY(-70%);
+}
+
+#footer-logo {
+  height: 30px;
+  width: 30px;
 }
 
 .wrapper {

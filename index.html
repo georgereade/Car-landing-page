@@ -18,8 +18,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Volkswagen e-Golf</title>
+    <link rel="icon" type="image/x-icon" href="./images/vw-logo2.png" />
   </head>
   <body>
+    <!-- Navbar -->
     <div class="wrapper">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button
@@ -78,7 +80,7 @@
         ><img id="nav-logo" src="./images/vw-logo2.png" alt="Volkswagen logo"
       /></a>
     </div>
-
+    <!-- Main body element -->
     <div class="container col-12 px-4 pt-3 pb-1">
       <div class="row justify-content-end">
         <img
@@ -89,17 +91,11 @@
       </div>
       <div class="col-lg-12 text-center text-lg-start hidden" id="top-header">
         <h1 class="display-4 fw-bold lh-1 text-body-emphasis my-5">
-          The new Volkswagen e-Golf
+          The new Volkswagen<br />
+          <strong>e-Golf</strong>
         </h1>
-        <!-- <button
-          class="col-4 w-33 btn btn-lg btn-primary"
-          type="submit"
-          fdprocessedid="b6p0wt"
-          id="discover-button"
-        >
-          Discover
-        </button> -->
       </div>
+      <!-- Features container -->
       <div
         class="container col align-items-center text-center text-lg-start py-5 hidden"
         id="features"
@@ -108,28 +104,84 @@
           Features
         </h1>
         <div class="row">
-          <div class="col-sm row-md py-2">
-            <h3 class="feature-header">Comfort ▼</h3>
-            <img class="feature-image" src="./images/comfort.webp" alt="" />
+          <div class="col-sm md-12 py-2">
+            <h3 class="feature-header">
+              Comfort
+              <span class="down-arrow">▼</span>
+            </h3>
+            <img
+              class="feature-image"
+              src="./images/comfort.webp"
+              alt="image of the interior of the e-golf"
+              id="comfort-image"
+            />
+            <p class="text-on-image mt-4" id="comfort-text">
+              The e‑Golf provides for
+              <strong>comfort, convenience and style</strong>. The cabin is
+              climate controlled and the fully adjustable front seats offer
+              lumber support as standard. Also available in leather.<br />
+              The e‑Golf's <strong>Car Net Mirrorlink</strong> system makes your
+              Android and Apple entertainment apps available on your dashboard.
+            </p>
           </div>
-          <div class="col-sm md-10 py-2">
-            <h3 class="feature-header">Innovation ▼</h3>
-            <img class="feature-image" src="./images/innovation.jpg" alt="" />
+          <div class="col-sm md-12 py-2">
+            <h3 class="feature-header">
+              Innovation <span class="down-arrow">▼</span>
+            </h3>
+            <img
+              class="feature-image"
+              src="./images/innovation.jpg"
+              alt="image of an e-golf highlighting tech features"
+              id="innovation-image"
+            />
+            <p class="text-on-image mt-4" id="innovation-text">
+              Technologies such as <strong>power assisted steering</strong> and
+              <strong>cruise control</strong>
+              take the hard work out of driving, especially on long motorway
+              hauls. <br />
+              The power assisted steering adapts your
+              <strong>steering to suit your speed</strong> - whether you're
+              slowing down to park or out on the open road - for easier and more
+              comfortable driving.
+            </p>
           </div>
-          <div class="col-sm md-10 py-2">
-            <h3 class="feature-header">Safety ▼</h3>
-            <img class="feature-image" src="./images/safety.webp" alt="" />
+          <div class="col-sm md-12 py-2">
+            <h3 class="feature-header">
+              Safety <span class="down-arrow">▼</span>
+            </h3>
+
+            <img
+              class="feature-image"
+              src="./images/safety.webp"
+              alt="image of a car proximity sensor detecting a pedestrian"
+              id="safety-image"
+            />
+            <p class="text-on-image mt-4" id="safety-text">
+              The e‑Golf features the full suite of Volkswagen driver
+              assistance, including
+              <strong
+                >Adaptive Cruise Control, Front Assist, Blind Spot Sensor, Park
+                Assist, Traffic Jam Assist</strong
+              >
+              and <strong>Emergency Assist</strong>
+              to bring the car to a controlled stop if you are unable to.
+            </p>
           </div>
         </div>
       </div>
+      <!-- Sign-up container -->
       <div
         id="signup-container"
         class="col align-items-center g-lg-5 pt-5 pb-1"
       >
         <div class="col-lg-12 text-center text-lg-start pt-5 my-2">
+          <h5 class="display-4 fw-bold lh-1 text-body-emphasis mb-3 pb-5">
+            Available soon at<br />
+            Premium Volkswagen
+          </h5>
           <p class="col-lg-12 fs-4">
-            Register your interest now to be among the first to drive our newest
-            car.
+            Register your interest now to be among the first to drive the new
+            e-Golf
           </p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
@@ -167,23 +219,56 @@
         </div>
       </div>
     </div>
+    <!-- Footer -->
     <div class="container">
       <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top"
       >
-        <p class="col-3 mb-0 text-body-secondary">© 2024 Premium Volkswagen</p>
+        <div class="col mb-3">
+          <a class="navbar-brand" href="/"
+            ><img
+              id="footer-logo"
+              src="./images/vw-logo.png"
+              alt="Volkswagen logo"
+          /></a>
+          <p class="text-muted">© Premium Volkswagen 2024</p>
+        </div>
 
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a href="/" class="nav-link px-2 text-body-secondary">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
-          </li>
-        </ul>
+        <div class="col mb-3">
+          <h5>e-Golf</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Contact</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Book a service</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Speak to an expert</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">Request a quote</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">FAQs</a>
+            </li>
+          </ul>
+        </div>
       </footer>
     </div>
     <script
