@@ -30,18 +30,6 @@ function fadeIn() {
   });
 }
 
-// subtle animation of feature headers to draw attention
-// function featuresPulse() {
-//   anime({
-//     targets: ".feature-header",
-//     duration: 300,
-//     easing: "easeInOutSine",
-//     scale: 1.05,
-//     loop: 2,
-//     direction: "alternate",
-//   });
-// }
-
 // add an event listener to fade in on scrolling
 window.addEventListener("scroll", scrollFunction);
 // call fadeIn functions on scroll
@@ -109,8 +97,8 @@ if ($(window).width() <= 1024) {
     });
     anime({
       targets: e.currentTarget,
-      opacity: 0.3,
-      duration: 700,
+      opacity: 0.5,
+      duration: 300,
       direction: "alternate",
       easing: "easeInOutExpo",
     });
@@ -129,8 +117,8 @@ if ($(window).width() <= 1024) {
     });
     anime({
       targets: e.currentTarget,
-      opacity: 0.3,
-      duration: 700,
+      opacity: 0.5,
+      duration: 300,
       direction: "alternate",
       easing: "easeInOutExpo",
     });
@@ -149,8 +137,8 @@ if ($(window).width() <= 1024) {
     });
     anime({
       targets: e.currentTarget,
-      opacity: 0.3,
-      duration: 700,
+      opacity: 0.5,
+      duration: 300,
       direction: "alternate",
       easing: "easeInOutExpo",
     });
