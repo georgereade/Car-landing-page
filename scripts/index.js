@@ -32,16 +32,16 @@ function fadeIn() {
 }
 
 // subtle animation of feature headers to draw attention
-function featuresPulse() {
-  anime({
-    targets: ".feature-header",
-    duration: 300,
-    easing: "easeInOutSine",
-    scale: 1.05,
-    loop: 2,
-    direction: "alternate",
-  });
-}
+// function featuresPulse() {
+//   anime({
+//     targets: ".feature-header",
+//     duration: 300,
+//     easing: "easeInOutSine",
+//     scale: 1.05,
+//     loop: 2,
+//     direction: "alternate",
+//   });
+// }
 
 // add an event listener to fade in on scrolling
 window.addEventListener("scroll", scrollFunction);
@@ -49,7 +49,6 @@ window.addEventListener("scroll", scrollFunction);
 function scrollFunction() {
   if (window.scrollY > 5 || document.body.scrollTop > 5) {
     fadeIn();
-    featuresPulse();
   }
 }
 
