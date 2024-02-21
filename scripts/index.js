@@ -24,8 +24,7 @@ function fadeIn() {
   anime({
     targets: ["#signup-container", "#features"],
     translateY: -30,
-    duration: 800,
-    delay: 200,
+    duration: 500,
     easing: "easeInQuad",
     opacity: 1,
   });
