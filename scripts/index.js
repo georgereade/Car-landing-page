@@ -1,5 +1,5 @@
-// animate the car entering the viewport
-function slideIn() {
+// animate image and header on load
+function onLoadAnimations() {
   anime({
     targets: "#main-car",
     translateX: -300,
@@ -7,37 +7,35 @@ function slideIn() {
     easing: "easeInOutExpo",
     opacity: 1,
   });
-}
-
-slideIn();
-
-// animate the main text becoming visible and rising
-function fadeIn() {
   anime({
-    targets: ["#signup-container", "#top-header", "#features"],
+    targets: ["#top-header"],
     translateY: -30,
+    delay: 500,
     duration: 800,
     easing: "easeInQuad",
     opacity: 1,
   });
 }
 
-// animate the features element becoming visible
-// function showFeatures() {
-//   anime({
-//     targets: "#features",
-//     opacity: 1,
-//     translateY: -25,
-//     duration: 1000,
-//     easing: "easeInOutSine",
-//   });
-// }
+onLoadAnimations();
+
+// animate the features and signup elements' opacity
+function fadeIn() {
+  anime({
+    targets: ["#signup-container", "#features"],
+    translateY: -30,
+    duration: 800,
+    delay: 200,
+    easing: "easeInQuad",
+    opacity: 1,
+  });
+}
 
 // subtle animation of feature headers to draw attention
 function featuresPulse() {
   anime({
     targets: ".feature-header",
-    duration: 600,
+    duration: 300,
     easing: "easeInOutSine",
     scale: 1.05,
     loop: 2,
@@ -58,6 +56,7 @@ function scrollFunction() {
 // start fade in animation on touch for mobile
 $(document).bind("touchstart", fadeIn);
 
+// submit button slides down and becomes visible
 function slideDown() {
   anime({
     targets: ["#email-form", "#confirm-button"],
@@ -68,9 +67,10 @@ function slideDown() {
   });
 }
 
+// register button becomes invisible
 function hideRegister() {
   anime({
-    targets: "#notify-button",
+    targets: "#register-button",
     duration: 400,
     delay: 100,
     opacity: 0,
@@ -78,9 +78,10 @@ function hideRegister() {
   });
 }
 
+// register button moved off screen after fading out
 function removeRegister() {
   anime({
-    targets: "#notify-button",
+    targets: "#register-button",
     duration: 500,
     delay: 400,
     translateY: -9999,
@@ -88,43 +89,18 @@ function removeRegister() {
   });
 }
 
+// run the above three functions after clicking the register button
 $(document).ready(function () {
-  $("#notify-button").click(function () {
+  $("#register-button").click(function () {
     slideDown();
     hideRegister();
     removeRegister();
   });
 });
 
-function hideDiscover() {
-  anime({
-    targets: "#discover-button",
-    duration: 400,
-    delay: 100,
-    opacity: 0,
-    easing: "easeInOutExpo",
-  });
-}
-
-function removeDiscover() {
-  anime({
-    targets: "#discover-button",
-    duration: 500,
-    delay: 400,
-    translateY: -9999,
-    easing: "easeInOutExpo",
-  });
-}
-
-$(document).ready(function () {
-  $("#discover-button").click(function () {
-    hideDiscover();
-    removeDiscover();
-  });
-});
-
+// functionality for expanding feature text if screen is below 1024px width
 if ($(window).width() <= 1024) {
-  $("#comfort-image").click(function (e) {
+  $("#comfort-div").click(function (e) {
     e.preventDefault();
     anime({
       targets: "#comfort-text",
@@ -144,7 +120,7 @@ if ($(window).width() <= 1024) {
 }
 
 if ($(window).width() <= 1024) {
-  $("#innovation-image").click(function (e) {
+  $("#innovation-div").click(function (e) {
     e.preventDefault();
     anime({
       targets: "#innovation-text",
@@ -164,7 +140,7 @@ if ($(window).width() <= 1024) {
 }
 
 if ($(window).width() <= 1024) {
-  $("#safety-image").click(function (e) {
+  $("#safety-div").click(function (e) {
     e.preventDefault();
     anime({
       targets: "#safety-text",

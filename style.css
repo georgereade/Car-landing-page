@@ -80,6 +80,7 @@ small {
   opacity: 0;
 }
 
+/* extra small screen breakpoint */
 @media screen and (max-width: 640px) {
   #main-car {
     margin-right: -220%;
@@ -103,6 +104,7 @@ small {
   }
 }
 
+/* small screen breakpoint */
 @media screen and (min-width: 641px) and (max-width: 1023px) {
   #main-car {
     margin-right: -70%;
@@ -126,6 +128,7 @@ small {
   }
 }
 
+/* medium screen breakpoint */
 @media screen and (min-width: 1023px) and (max-width: 1240px) {
   #main-car {
     margin-right: -50%;
@@ -142,7 +145,8 @@ small {
 
 .navbar,
 #features,
-#signup-container {
+#signup-container,
+h2 {
   padding: 1rem;
   border-bottom: #10268c;
   border-width: 5px;
