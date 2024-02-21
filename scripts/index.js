@@ -44,7 +44,7 @@ function fadeIn() {
 
 // add an event listener to fade in on scrolling
 window.addEventListener("scroll", scrollFunction);
-// call fadeIn and featuresPulse functions on scroll
+// call fadeIn functions on scroll
 function scrollFunction() {
   if (window.scrollY > 5 || document.body.scrollTop > 5) {
     fadeIn();
