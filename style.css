@@ -40,6 +40,11 @@ small {
   opacity: 0;
 }
 
+#main {
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
 /* specific sizing for the Galaxy Fold or similar */
 @media screen and (height: 653px) and (width: 280px) {
   #main-car {
@@ -83,7 +88,7 @@ small {
 /* extra small screen breakpoint */
 @media screen and (max-width: 640px) {
   #main-car {
-    margin-right: -220%;
+    margin-right: -240%;
   }
   html,
   body {
@@ -101,6 +106,10 @@ small {
   }
   .down-arrow {
     opacity: 1;
+  }
+  #main {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
@@ -125,6 +134,10 @@ small {
   }
   .down-arrow {
     opacity: 1;
+  }
+  #main {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
