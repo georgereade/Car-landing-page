@@ -45,7 +45,7 @@ small {
   padding-top: 1rem;
 }
 
-/* specific sizing for the Galaxy Fold or similar */
+/* specific sizing for the Galaxy Fold or similar for car animation */
 @media screen and (height: 653px) and (width: 280px) {
   #main-car {
     right: -110%;
@@ -55,7 +55,7 @@ small {
   }
 }
 
-/* specific sizing for Surface Duo or similar */
+/* specific sizing for Surface Duo or similar for car animation */
 @media screen and (height: 720px) and (width: 540px) {
   #main-car {
     right: 70%;
@@ -89,7 +89,6 @@ small {
   #main-car {
     margin-right: -200%;
   }
-  html,
   body {
     overflow-x: hidden;
   }
@@ -117,7 +116,6 @@ small {
   #main-car {
     margin-right: -70%;
   }
-  html,
   body {
     overflow-x: hidden;
   }
@@ -145,7 +143,6 @@ small {
   #main-car {
     margin-right: -30%;
   }
-  html,
   body {
     overflow-x: hidden;
   }
@@ -166,7 +163,6 @@ h2 {
 }
 
 #signup-container {
-  opacity: 0;
   border: none;
 }
 
