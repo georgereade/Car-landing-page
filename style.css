@@ -87,7 +87,7 @@ small {
 /* extra small screen breakpoint */
 @media screen and (max-width: 640px) {
   #main-car {
-    margin-right: -220%;
+    margin-right: -200%;
   }
   html,
   body {
