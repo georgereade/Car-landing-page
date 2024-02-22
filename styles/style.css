@@ -84,6 +84,16 @@ small {
   opacity: 0;
 }
 
+.hidden-div {
+  height: 0px;
+  opacity: 0;
+}
+
+.revealed-div {
+  height: 160px;
+  opacity: 1;
+}
+
 /* extra small screen breakpoint */
 @media screen and (max-width: 640px) {
   #main-car {
@@ -196,4 +206,8 @@ h2 {
 
 .focus-visible {
   outline: hotpink solid 2px;
+}
+
+.rotate {
+  rotate: 180deg;
 }

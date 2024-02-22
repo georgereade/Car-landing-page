@@ -85,16 +85,25 @@ $(document).ready(function () {
 });
 
 // functionality for expanding feature text if screen is below 1024px width
+var showComfortText = anime({
+  targets: "#comfort-text",
+  opacity: 1,
+  height: 160,
+  duration: 500,
+  easing: "easeInOutExpo",
+  autoplay: false,
+});
+
+var rotateComfortArrow = anime({
+  targets: "#comfort-arrow",
+  duration: 400,
+  rotate: 180,
+  autoplay: false,
+});
+
 if ($(window).width() <= 1024) {
   $("#comfort-div").click(function (e) {
     e.preventDefault();
-    anime({
-      targets: "#comfort-text",
-      opacity: 1,
-      height: 160,
-      duration: 500,
-      easing: "easeInOutExpo",
-    });
     anime({
       targets: e.currentTarget,
       opacity: 0.5,
@@ -102,45 +111,85 @@ if ($(window).width() <= 1024) {
       direction: "alternate",
       easing: "easeInOutExpo",
     });
+
+    showComfortText.play();
+    rotateComfortArrow.play();
+    showComfortText.finished.then(() => {
+      showComfortText.reverse();
+      rotateComfortArrow.reverse();
+    });
   });
 }
+
+var showInnovationText = anime({
+  targets: "#innovation-text",
+  opacity: 1,
+  height: 160,
+  duration: 500,
+  easing: "easeInOutExpo",
+  autoplay: false,
+});
+
+var rotateInnovationArrow = anime({
+  targets: "#innovation-arrow",
+  duration: 400,
+  rotate: 180,
+  autoplay: false,
+});
 
 if ($(window).width() <= 1024) {
   $("#innovation-div").click(function (e) {
     e.preventDefault();
     anime({
-      targets: "#innovation-text",
-      opacity: 1,
-      height: 160,
-      duration: 500,
-      easing: "easeInOutExpo",
-    });
-    anime({
       targets: e.currentTarget,
       opacity: 0.5,
       duration: 300,
       direction: "alternate",
       easing: "easeInOutExpo",
+    });
+
+    showInnovationText.play();
+    rotateInnovationArrow.play();
+    showInnovationText.finished.then(() => {
+      showInnovationText.reverse();
+      rotateInnovationArrow.reverse();
     });
   });
 }
 
+var showSafetyText = anime({
+  targets: "#safety-text",
+  opacity: 1,
+  height: 160,
+  duration: 500,
+  easing: "easeInOutExpo",
+  autoplay: false,
+});
+
+var rotateSafetyArrow = anime({
+  targets: "#safety-arrow",
+  duration: 400,
+  rotate: 180,
+  autoplay: false,
+});
+
 if ($(window).width() <= 1024) {
   $("#safety-div").click(function (e) {
     e.preventDefault();
-    anime({
-      targets: "#safety-text",
-      opacity: 1,
-      height: 160,
-      duration: 500,
-      easing: "easeInOutExpo",
-    });
+
     anime({
       targets: e.currentTarget,
       opacity: 0.5,
       duration: 300,
       direction: "alternate",
       easing: "easeInOutExpo",
+    });
+
+    showSafetyText.play();
+    rotateSafetyArrow.play();
+    showSafetyText.finished.then(() => {
+      showSafetyText.reverse();
+      rotateSafetyArrow.reverse();
     });
   });
 }
