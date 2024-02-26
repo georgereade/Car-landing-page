@@ -84,7 +84,7 @@ $(document).ready(function () {
   });
 });
 
-// functionality for expanding feature text if screen is below 1024px width
+// functionality for expanding feature text if screen is below 1024px width, and rotating the arrow. Reverses the animation on alternate presses
 var showComfortText = anime({
   targets: "#comfort-text",
   opacity: 1,
